@@ -80,7 +80,57 @@
 		</div>
 	</div>
 	<!---->
-	@yield('content')
+	<div class="container">
+
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+			<div class="">
+				<div class=" top-nav rsidebar span_1_of_left">
+					<h3 class="cate">CATEGORIES</h3>
+		 <ul class="menu">
+		
+		<li>
+			<ul class="kid-menu">
+				<li><a href="product.html">Tempus pretium</a></li>
+				<li ><a href="product.html">Dignissim neque</a></li>
+				<li ><a href="product.html">Ornared id aliquet</a></li>
+			</ul>
+		</li>
+		<ul class="kid-menu ">
+				<li><a href="product.html">Commodo sit</a></li>
+				<li ><a href="product.html">Urna ac tortor sc</a></li>
+				<li><a href="product.html">Ornared id aliquet</a></li>
+				<li><a href="product.html">Urna ac tortor sc</a></li>
+				<li ><a href="product.html">Eget nisi laoreet</a></li>
+				<li><a href="product.html">Faciisis ornare</a></li>
+				<li class="menu-kid-left"><a href="contact.html">Contact us</a></li>
+			</ul>
+	</ul>
+					</div>
+				
+					<div class=" chain-grid menu-chain">
+	   		     		<a href="single.html"><img class="img-responsive chain" src="images/wat.jpg" alt=" " /></a>	   		     		
+	   		     		<div class="grid-chain-bottom chain-watch">
+		   		     		<span class="actual dolor-left-grid">300$</span>
+		   		     		<span class="reducedfrom">500$</span>  
+		   		     		<h6><a href="single.html">Lorem ipsum dolor</a></h6>  		     			   		     										
+	   		     		</div>
+	   		     	</div>
+	   		     	 <a class="view-all all-product" href="product.html">VIEW ALL PRODUCTS<span> </span></a> 	
+			</div>
+	   		    <div class="clearfix"> </div>	
+			</div>
+			<div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
+
+
+
+			@yield('content')
+
+
+
+			</div>
+		</div>
+	</div>		
 	
 	<!---->
 	<div class="footer">

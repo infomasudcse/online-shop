@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Shop;
+use App\Http\Controllers\Sale;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,10 @@ use App\Http\Controllers\Shop;
 |
 */
 
-Route::get('/', [Shop::class, 'index']);
+Route::get('/', [Productcontroller::class, 'index']);
+Route::get('/products', [Productcontroller::class, 'products']);
+Route::get('/product', [Productcontroller::class, 'productDetails']);
+Route::get('/cart', [Sale::class, 'viewCart']);
+Route::get('/checkout', [Sale::class, 'viewCheckout']);
+Route::get('/thankyou', [Sale::class, 'thankYou']);
+

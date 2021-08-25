@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return view('product.index');
     }
 
     /**
@@ -22,9 +22,9 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function products()
     {
-        //
+        return view('product.products');
     }
 
     /**
@@ -33,9 +33,9 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function productDetails()
     {
-        //
+        return view('product.singleProduct');
     }
 
     /**
