@@ -19,8 +19,11 @@
 		</div>
 		<!-- grids_of_4 -->
 		<div class="grid-product">
-		  <div class="  product-grid">
-			<div class="content_box"><a href="single.html">
+		  
+        @foreach($products as $product)
+            <div class=" product-grid">
+			    <div class="content_box">
+                <a href="{{ route('product.show', ['slug' => $product->slug] ) }}">
 			   	<div class="left-grid-view grid-view-left">
 			   	   	 <img src="images/pic13.jpg" class="img-responsive watch-right" alt=""/>
 				   	   	<div class="mask">
@@ -28,123 +31,15 @@
 			            </div>
 				   	  </a>
 				</div>
-				    <h4><a href="#"> Duis autem</a></h4>
+				    <h4><a href="#"> {{ $product->name }}</a></h4>
 				     <p>It is a long established fact that a reader</p>
-				     Rs. 499
+				      {{ $product->presentPrice() }}
 			   	</div>
               </div>
-			 <div class="  product-grid">
-			<div class="content_box"><a href="single.html">
-			   	<div class="left-grid-view grid-view-left">
-			   	   	 <img src="images/pic2.jpg" class="img-responsive watch-right" alt=""/>
-				   	   	<div class="mask">
-	                        <div class="info">Quick View</div>
-			            </div>
-				   	  </a>
-				   </div>
-				    <h4><a href="#"> Duis autem</a></h4>
-				     <p>It is a long established fact that a reader</p>
-				     Rs. 499
-			   	</div>
-                 </div>
-			 <div class="  product-grid">
-			<div class="content_box"><a href="single.html">
-			   	<div class="left-grid-view grid-view-left">
-			   	   	 <img src="images/pic3.jpg" class="img-responsive watch-right" alt=""/>
-				   	   	<div class="mask">
-	                        <div class="info">Quick View</div>
-			            </div>
-				   	  </a>
-				   </div>
-				    <h4><a href="#"> Duis autem</a></h4>
-				     <p>It is a long established fact that a reader</p>
-				     Rs. 499
-			   	</div>
-                 </div>
-		  <div class="  product-grid">
-			<div class="content_box"><a href="single.html">
-			   	<div class="left-grid-view grid-view-left">
-			   	   	 <img src="images/pic4.jpg" class="img-responsive watch-right" alt=""/>
-				   	   	<div class="mask">
-	                        <div class="info">Quick View</div>
-			            </div>
-				   	  </a>
-				   </div>
-				    <h4><a href="#"> Duis autem</a></h4>
-				     <p>It is a long established fact that a reader</p>
-				     Rs. 499
-			   	</div>
-              </div>
-			 <div class="  product-grid">
-			<div class="content_box"><a href="single.html">
-			   	<div class="left-grid-view grid-view-left">
-			   	   	 <img src="images/pic6.jpg" class="img-responsive watch-right" alt=""/>
-				   	   	<div class="mask">
-	                        <div class="info">Quick View</div>
-			            </div>
-				   	  </a>
-				   </div>
-				    <h4><a href="#"> Duis autem</a></h4>
-				     <p>It is a long established fact that a reader</p>
-				     Rs. 499
-			   	</div>
-                 </div>
-			 <div class="  product-grid">
-			<div class="content_box"><a href="single.html">
-			   	<div class="left-grid-view grid-view-left">
-			   	   	 <img src="images/pic7.jpg" class="img-responsive watch-right" alt=""/>
-				   	   	<div class="mask">
-	                        <div class="info">Quick View</div>
-			            </div>
-				   	  </a>
-				   </div>
-				    <h4><a href="#"> Duis autem</a></h4>
-				     <p>It is a long established fact that a reader</p>
-				     Rs. 499
-			   	</div>
-                 </div>
-		  <div class="  product-grid">
-			<div class="content_box"><a href="single.html">
-			   	<div class="left-grid-view grid-view-left">
-			   	   	 <img src="images/pic8.jpg" class="img-responsive watch-right" alt=""/>
-				   	   	<div class="mask">
-	                        <div class="info">Quick View</div>
-			            </div>
-				   	  </a>
-				   </div>
-				    <h4><a href="#"> Duis autem</a></h4>
-				     <p>It is a long established fact that a reader</p>
-				     Rs. 499
-			   	</div>
-              </div>
-			 <div class="  product-grid">
-			<div class="content_box"><a href="single.html">
-			   	<div class="left-grid-view grid-view-left">
-			   	   	 <img src="images/pic11.jpg" class="img-responsive watch-right" alt=""/>
-				   	   	<div class="mask">
-	                        <div class="info">Quick View</div>
-			            </div>
-				   	  </a>
-				   </div>
-				    <h4><a href="#"> Duis autem</a></h4>
-				     <p>It is a long established fact that a reader</p>
-				     Rs. 499
-			   	</div>
-                 </div>
-			 <div class=" product-grid">
-			<div class="content_box"><a href="single.html">
-			   	<div class="left-grid-view grid-view-left">
-			   	   	 <img src="images/pic12.jpg" class="img-responsive watch-right" alt=""/>
-				   	   	<div class="mask">
-	                        <div class="info">Quick View</div>
-			            </div>
-				   	  </a>
-				   </div>
-				    <h4><a href="#"> Duis autem</a></h4>
-				     <p>It is a long established fact that a reader</p>
-				     Rs. 499
-			   	</div>
-                 </div>
+
+        @endforeach
+            
+
 			<div class="clearfix"> </div>
 		</div>
 	</div>

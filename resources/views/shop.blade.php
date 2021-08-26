@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Inline shope A Ecommerce</title>
+<title>Laravel Ecommerce  @yield('title')</title>
 <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
 <!--theme-style-->
 <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" media="all" />	
@@ -109,14 +109,14 @@
 					</div>
 				
 					<div class=" chain-grid menu-chain">
-	   		     		<a href="single.html"><img class="img-responsive chain" src="images/wat.jpg" alt=" " /></a>	   		     		
+	   		     		<a href="single.html"><img class="img-responsive chain" src="{{ asset('images/wat.jpg') }}" alt=" " /></a>	   		     		
 	   		     		<div class="grid-chain-bottom chain-watch">
 		   		     		<span class="actual dolor-left-grid">300$</span>
 		   		     		<span class="reducedfrom">500$</span>  
 		   		     		<h6><a href="single.html">Lorem ipsum dolor</a></h6>  		     			   		     										
 	   		     		</div>
 	   		     	</div>
-	   		     	 <a class="view-all all-product" href="product.html">VIEW ALL PRODUCTS<span> </span></a> 	
+	   		     	 <a class="view-all all-product" href="{{ route('products')}}">VIEW ALL PRODUCTS<span> </span></a> 	
 			</div>
 	   		    <div class="clearfix"> </div>	
 			</div>

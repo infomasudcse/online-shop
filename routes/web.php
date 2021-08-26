@@ -16,8 +16,8 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', [Productcontroller::class, 'index']);
-Route::get('/products', [Productcontroller::class, 'products']);
-Route::get('/product', [Productcontroller::class, 'productDetails']);
+Route::get('/products', [Productcontroller::class, 'index'])->name('products');
+Route::get('/product/{slug}', [Productcontroller::class, 'show'])->name('product.show');
 Route::get('/cart', [Sale::class, 'viewCart']);
 Route::get('/checkout', [Sale::class, 'viewCheckout']);
 Route::get('/thankyou', [Sale::class, 'thankYou']);

@@ -14,29 +14,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product.index');
+        
+        $products = Product::simplePaginate(15);
+        return view('product.products')->with('products',  $products);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function products()
-    {
-        return view('product.products');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function productDetails()
-    {
-        return view('product.singleProduct');
-    }
 
     /**
      * Display the specified resource.
@@ -44,9 +26,13 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($slug)
     {
-        //
+        $product = Product::where('slug', $slug)->firstOr( function(){
+           return null;
+        });
+
+        return view('product.singleProduct',['product'=>$product]);
     }
 
     /**
